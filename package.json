@@ -4,9 +4,11 @@
   "description": "",
   "private": true,
   "egg": {
-    "declarations": true
+    "declarations": true,
+    "framework": "clap-mongoose-core"
   },
   "dependencies": {
+    "clap-mongoose-core": "file:../clap-mongoose-core",
     "egg": "^2",
     "egg-scripts": "^2"
   },
