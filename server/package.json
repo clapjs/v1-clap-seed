@@ -1,14 +1,14 @@
 {
-  "name": "clap-seed",
+  "name": "v1.clap-seed",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "egg": {
     "declarations": true,
-    "framework": "@clap/core"
+    "framework": "@clapjs/core"
   },
   "dependencies": {
-    "@clap/core": "file:../../v1.clap.core",
+    "@clapjs/core": "file:../../v1-clap-core",
     "egg": "^2",
     "egg-scripts": "^2"
   },

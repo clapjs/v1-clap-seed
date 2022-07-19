@@ -1,4 +1,4 @@
-# v1.clap.seed
+# v1-clap-seed
 
 
 
