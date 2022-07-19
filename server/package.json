@@ -1,14 +1,14 @@
 {
-  "name": "clap-mongoose-seed",
+  "name": "clap-seed",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "egg": {
     "declarations": true,
-    "framework": "clap-mongoose-core"
+    "framework": "@clap/core"
   },
   "dependencies": {
-    "clap-mongoose-core": "file:../clap-mongoose-core",
+    "@clap/core": "file:../../v1.clap.core",
     "egg": "^2",
     "egg-scripts": "^2"
   },
@@ -25,8 +25,8 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-clap-mongoose-seed",
-    "stop": "egg-scripts stop --title=egg-server-clap-mongoose-seed",
+    "start": "egg-scripts start --daemon --title=egg-server-clap-seed",
+    "stop": "egg-scripts stop --title=egg-server-clap-seed",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",

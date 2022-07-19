@@ -1,4 +1,4 @@
-# clap-mongoose-seed
+# v1.clap.seed
 
 
 
