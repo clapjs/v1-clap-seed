@@ -6,10 +6,10 @@ module.exports = appInfo => {
       default: {
         singleton: 'model', // models in `app/${singleton}`
         singletonSrc: [ 'core/model' ],
-        url: 'mongodb://192.168.192.55/clap-mongoose',
+        url: 'mongodb://121.42.8.134/6305a9d0e60f46789fde8976',
         options: {
-          user: 'clap',
-          pass: 'clap',
+          user: 'test',
+          pass: 'test',
           useUnifiedTopology: true,
         },
         framework: 'core',
