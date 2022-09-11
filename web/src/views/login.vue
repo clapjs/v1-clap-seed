@@ -129,7 +129,6 @@ export default {
             user.userCode = user.userCode.trim();
             user.userPwd = user.userPwd.trim();
             this.doLoginUser = user;
-            console.log(this.$config.url.login);
             const result = await this.$clap.http.post(this.$config.url.login, user);
             if (result.data.error.code === '0') {
               this.SetUser(result.data.record);
@@ -226,7 +225,7 @@ export default {
                         return item.idApplication
                     }))
                     await this.ToggleApplication(res.data.records[0].idApplication._id);
-                    this.ToggleMenu();
+                    this.ToggleMenu({key: 'dash', title: '首页', routeName: 'dash', controlType: 'Group', idOrgan: '', organs: [], closable: false});
                 } else {
                     this.$message.info('暂无可用权限，请联系您的的管理员！')
                 }
