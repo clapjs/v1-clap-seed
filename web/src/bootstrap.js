@@ -8,7 +8,7 @@ export default function Initializer() {
     store.dispatch('ToggleLang', Vue.ls.get('LANG', config.lang))
     store.dispatch('ToggleMultiTab', Vue.ls.get('MULTI_TAB', config.multiTab))
 
-    const session=Vue.prototype.$global.platform==='web'?Vue.$cookies:Vue.ls;
+    const session=process.env.IS_ELECTRON?Vue.ls:Vue.$cookies;
 
     if(session.get('ACCESS_TOKEN')!==null){
         const applications=Vue.ls.get('APPLICATIONS', []);
