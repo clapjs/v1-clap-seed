@@ -14,10 +14,9 @@ export default function Initializer() {
         const applications=Vue.ls.get('APPLICATIONS', []);
         store.dispatch('ToggleApplications', applications);
         const menu=Vue.ls.get('MENU', {key: 'dash', title: '首页', routeName: 'dash', controlType: 'Group', idOrgan: '', organs: [], closable: false})
-        const application=menu.idApplication?menu.idApplication:(applications[0]?applications[0]._id:undefined);
-        store.dispatch('ToggleApplication', application).then(()=>{
-            store.dispatch('ToggleMenu', menu);
-        });
+        const application=menu.idApplication?menu.idApplication:(applications[0]?applications[0]._id:'');
+        store.dispatch('ToggleApplication', application);
+        store.dispatch('ToggleMenu', menu);
         store.commit('SET_TOKEN', session.get('ACCESS_TOKEN'))
         store.commit('SET_USER', session.get('LOGIN_USER'))
         store.commit('SET_GROUP', session.get('LOGIN_GROUP'))
